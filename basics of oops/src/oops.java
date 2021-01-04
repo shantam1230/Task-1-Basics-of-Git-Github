@@ -1,31 +1,32 @@
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Map;
 class oops {
 
     boolean find_common(String a[])
     {
-        // making changes useing a hashmap 
-        Map<String> hm = new HashMap<String>();
+        // making changes using a hashmap
+        Map<String,Integer> hm = new HashMap<String,Integer>();
         
         for(int i=0;i<a.length;i++)
         {
-           if(hm.containsKey(a[i])
+           if(hm.containsKey(a[i]))
               {
                   return true;
               }
               else
               {
-                  hm.add(a[i],1);
+                  hm.put(a[i],1);
               }
         }
         return false;
     }
 }
-class main{
+class main_class{
     public static void main(String[] args) {
 
         oops obj = new oops();
-        String data[] = new String[5];
+        String[] data = new String[5];
 
         Scanner in = new Scanner(System.in);
         System.out.println("Please Enter the data in the Array");
