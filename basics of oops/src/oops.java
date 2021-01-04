@@ -1,18 +1,22 @@
 import java.util.Scanner;
-
+import java.util.Map;
 class oops {
 
     boolean find_common(String a[])
     {
+        // making changes useing a hashmap 
+        Map<String> hm = new HashMap<String>();
+        
         for(int i=0;i<a.length;i++)
         {
-            for(int j=0;i<a.length;i++)
-            {
-                if(a[i] == a[j])
-                {
-                    return true;
-                }
-            }
+           if(hm.containsKey(a[i])
+              {
+                  return true;
+              }
+              else
+              {
+                  hm.add(a[i],1);
+              }
         }
         return false;
     }
